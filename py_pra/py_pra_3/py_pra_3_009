@@ -1,0 +1,17 @@
+dic = { 1 : "a",
+        2 : "b",
+        3 : "c"}
+dic[4] = "d"
+
+print(dic[1])
+print(dic)
+
+num = 2
+
+if num in dic:
+  print(dic[num])
+else:
+  print("no")
+
+for key in dic:
+  print(key, dic[key])

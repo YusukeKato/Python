@@ -1,0 +1,15 @@
+#class
+
+class MyClass:
+  pass
+
+class MyClass2:
+  def __init__(self):
+    self.val = 0
+    print(self.val)
+
+a = MyClass()
+b = MyClass2()
+
+a.val = 12
+print(a.val)

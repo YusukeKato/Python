@@ -1,0 +1,24 @@
+#Rock-Paper-Siccors
+from random import randint
+
+while True:
+  random_val = randint(0, 2)
+  user_val = input("0:Rock 1:Paper 2:Siccors 3:Quit")
+  if user_val == "3":
+    print("quit")
+    break
+  if user_val not in ("0", "1", "2"):
+    print("continue")
+    continue
+  user_val = int(user_val)
+  if user_val == random_val:
+    print("user:"+str(user_val)+" enemy:"+str(random_val)+" continue")
+    continue
+  elif (user_val == 0 and random_val == 2) or \ #backslash
+       (user_val == 1 and random_val == 0) or \ #backslash
+       (user_val == 2 and random_val == 1):
+    print("user:"+str(user_val)+" enemy:"+str(random_val)+" win!!")
+    continue
+  else:
+    print("user:"+str(user_val)+" enemy:"+str(random_val)+" lose...")
+    continue

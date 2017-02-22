@@ -1,0 +1,8 @@
+s = 1
+m = s * 60
+h = m * 60
+d = h * 24
+y = d * 365
+life = y * 100
+print(life)
+

@@ -1,0 +1,6 @@
+list = [1, 2, 3, 4, 5]
+for member in list:
+  print(member);
+
+for cnt in range(10):
+  print(cnt)

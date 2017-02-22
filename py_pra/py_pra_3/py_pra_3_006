@@ -1,0 +1,10 @@
+def function(argument):
+  argument *= argument
+  print(argument)
+
+def function2(argument):
+  argument += 1
+  return argument
+
+function(2)
+print(function2(2))

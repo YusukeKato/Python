@@ -1,0 +1,57 @@
+'''make game
+'''
+from random import randint
+
+# make charactor
+class Chara:
+  def __init__(self, name):
+    self.name = name
+    self.hp = randint(1,50)
+    self.at = randint(1,5)
+    self.de = randint(1,5)
+  def print_para(self):
+    print(" name : " + self.name)
+    print(" hp : " + str(self.hp))
+    print(" at : " + str(self.at))
+    print(" de : " + str(self.de))
+
+# make
+hero = Chara("hero")
+enemy = Chara("enemy")
+
+# body
+while True:
+  print(' 1:attack 2:magic 3:hero_para' + \
+        ' 4:enemy_para 9:quit')
+  in_key = input(' Input number : ')
+  if in_key == '1':
+    damage = randint(1,10) + hero.at - enemy.de
+    enemy.hp -= damage
+    print(' hero attack : ' + str(damage))
+  elif in_key == '2':
+    rand_val = randint(1,2)
+    if rand_val == 1:
+      damage = randint(1,20) + hero.at
+      enemy.hp -= damage
+      print(' hero magic : ' + str(damage))
+    elif rand_val == 2:
+      damage = 0
+      print(' hero magic : ' + str(damage))
+  elif in_key == '3':
+    hero.print_para()
+  elif in_key == '4':
+    enemy.print_para()
+  else:
+    print(' quit')
+    break
+  # palyer damage
+  damage = randint(1,10) + enemy.at - hero.de
+  hero.hp -= damage
+  print(' enemy attack : ' + str(damage))
+  # judge (player advantageous)
+  if enemy.hp <= 0:
+    print(' !!win!!')
+    break
+  elif hero.hp <= 0:
+    print(' lose......')
+    break

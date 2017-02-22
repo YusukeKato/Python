@@ -1,0 +1,17 @@
+# property
+
+class Prop:
+  def __init__(self):
+    self.__x = 0
+  def getx(self):
+    return self.__x
+  def setx(self,x):
+    self.__x = x
+  x = property(getx,setx)
+
+a = Prop()
+print(a.x)
+a.x = 10
+print(a.x)
+a._Prop__x = 22
+print(a._Prop__x)
