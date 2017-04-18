@@ -1,0 +1,19 @@
+from random import *
+import math
+
+TIMES  = 1000000
+RANGE = 1
+
+InCount = 0
+OutCount = 0
+
+for i in range(TIMES):
+  x = uniform(0, RANGE)
+  y = uniform(0, RANGE)
+  if math.sqrt(pow(x,2) + pow(y,2)) <= RANGE:
+    InCount += 1
+  else:
+    OutCount += 1
+
+pi = 4 * InCount / (InCount + OutCount)
+print(pi)
